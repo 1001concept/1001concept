@@ -2,7 +2,7 @@
 title: Choosing timber for interiors — walnut, oak or ash?
 excerpt: The three most common timbers in high-end interiors, how they differ and when to use each.
 date: 2026-08-15
-cover: livingF
+cover: journalWood
 ---
 
 Timber shapes the feeling of a home more than any other material. The three below account for most of our projects.

@@ -25,7 +25,7 @@ const GROUPS = [
   { key: 'services', href: '/services' },
   { key: 'journal', href: '/journal' },
   { key: 'contact', href: '/contact' },
-];
+].filter((g) => site.showProjects || g.key !== 'projects');
 
 export default function Header({ lang, nav }) {
   const pathname = usePathname() || `/${lang}`;

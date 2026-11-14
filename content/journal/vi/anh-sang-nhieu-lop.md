@@ -2,7 +2,7 @@
 title: Vì sao ngôi nhà đẹp cần nhiều hơn một lớp ánh sáng
 excerpt: Một chiếc đèn trần giữa phòng làm mọi thứ sáng đều — và phẳng. Ánh sáng nhiều lớp là cách đơn giản nhất để căn nhà có chiều sâu.
 date: 2026-10-20
-cover: interiorC
+cover: journalLight
 ---
 
 Phần lớn căn nhà ở Việt Nam được chiếu sáng bằng một nguồn duy nhất: đèn trần giữa phòng. Cách này đủ sáng, nhưng làm mọi bề mặt phẳng như nhau và khiến căn phòng mất đi chiều sâu khi trời tối.

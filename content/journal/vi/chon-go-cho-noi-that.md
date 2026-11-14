@@ -2,7 +2,7 @@
 title: Chọn gỗ cho nội thất — óc chó, sồi hay tần bì?
 excerpt: Ba loại gỗ phổ biến nhất trong nội thất cao cấp, khác nhau ở đâu và khi nào nên dùng loại nào.
 date: 2026-08-15
-cover: livingF
+cover: journalWood
 ---
 
 Gỗ là chất liệu quyết định cảm giác của một căn nhà nhiều hơn bất kỳ thứ gì khác. Ba loại dưới đây chiếm phần lớn các dự án của chúng tôi.

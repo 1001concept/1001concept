@@ -26,7 +26,7 @@ export default async function AboutPage({ params }) {
         <div className="wrap split">
           <div data-reveal>
             <p className="kicker">{t.storyTitle}</p>
-            <Img name="drafting" alt="" ratio="4 / 5" sizes="(min-width: 900px) 42vw, 100vw" className="split__img" />
+            <Img name="aboutPortrait" alt="" ratio="4 / 5" sizes="(min-width: 900px) 42vw, 100vw" className="split__img" />
           </div>
           <div className="split__text" data-reveal style={{ '--d': '0.1s' }}>
             {t.story.map((p) => (

@@ -1,0 +1,52 @@
+{
+  "capy-house-focus": {
+    "widths": [
+      800,
+      1407
+    ],
+    "width": 1407,
+    "height": 1876
+  },
+  "capy-house": {
+    "widths": [
+      800,
+      1405
+    ],
+    "width": 1405,
+    "height": 1874
+  },
+  "kitchen": {
+    "widths": [
+      800,
+      1405
+    ],
+    "width": 1405,
+    "height": 1874
+  },
+  "quilux": {
+    "widths": [
+      800,
+      1492
+    ],
+    "width": 1492,
+    "height": 1053
+  },
+  "wine-cabinet": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 3072,
+    "height": 4096
+  },
+  "wine-lounge": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 4096,
+    "height": 2896
+  }
+}

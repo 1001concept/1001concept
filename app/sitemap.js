@@ -2,12 +2,14 @@ import { projects } from '@/content/projects';
 import { locales, site } from '@/content/site';
 import { getPosts } from '@/lib/journal';
 
-const PAGES = ['', '/projects', '/services', '/process', '/about', '/journal', '/contact'];
+const PAGES = ['', '/projects', '/services', '/process', '/about', '/journal', '/contact'].filter(
+  (path) => site.showProjects || path !== '/projects',
+);
 
 export default function sitemap() {
   const paths = [
     ...PAGES,
-    ...projects.map((p) => `/projects/${p.slug}`),
+    ...(site.showProjects ? projects.map((p) => `/projects/${p.slug}`) : []),
     ...getPosts('vi').map((p) => `/journal/${p.slug}`),
   ];
   return locales.flatMap((lang) =>

@@ -68,7 +68,6 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={lang} className={`${serif.variable} ${sans.variable}`} suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="" />
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch(e){}" }} />
       </head>
       <body>

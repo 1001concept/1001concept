@@ -2,7 +2,9 @@ import Link from 'next/link';
 import Logo from '@/components/Logo';
 import { site } from '@/content/site';
 
-const ITEMS = ['projects', 'services', 'process', 'about', 'journal', 'contact'];
+const ITEMS = ['projects', 'services', 'process', 'about', 'journal', 'contact'].filter(
+  (key) => site.showProjects || key !== 'projects',
+);
 
 export function Footer({ lang, dict }) {
   return (
@@ -72,12 +74,26 @@ export function Footer({ lang, dict }) {
 export function ContactDock({ dict }) {
   return (
     <div className="dock">
-      <a className="dock__zalo" href={`https://zalo.me/${site.zalo}`} target="_blank" rel="noopener noreferrer" aria-label={dict.dock.zalo}>
+      <a
+        className="dock__zalo"
+        href={`https://zalo.me/${site.zalo}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={dict.dock.zalo}
+      >
         Zalo
       </a>
-      <a href={`https://m.me/${site.messenger}`} target="_blank" rel="noopener noreferrer" aria-label={dict.dock.messenger}>
+      <a
+        href={`https://m.me/${site.messenger}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={dict.dock.messenger}
+      >
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-          <path d="M12 3.5c-4.9 0-8.5 3.5-8.5 8 0 2.4 1 4.5 2.700 6v3l2.900-1.600c.9.3 1.900.4 2.900.4 4.900 0 8.500-3.500 8.500-7.800s-3.600-8-8.500-8Z" strokeLinejoin="round" />
+          <path
+            d="M12 3.5c-4.9 0-8.5 3.5-8.5 8 0 2.4 1 4.5 2.700 6v3l2.900-1.600c.9.3 1.900.4 2.900.4 4.900 0 8.500-3.500 8.500-7.800s-3.600-8-8.500-8Z"
+            strokeLinejoin="round"
+          />
           <path d="m7.500 13.500 3-3.200 2.700 2.200 3.300-3" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </a>

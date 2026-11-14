@@ -22,10 +22,7 @@ export default async function Home({ params }) {
   const h = dict.home;
   const featured = projects.slice(0, 4);
   const posts = getPosts(lang).slice(0, 3);
-  const services = [
-    ...dict.services.items.map((s) => ({ name: s.name, text: s.summary })),
-    ...dict.services.extras,
-  ];
+  const services = [...dict.services.items.map((s) => ({ name: s.name, text: s.summary })), ...dict.services.extras];
 
   return (
     <>
@@ -56,7 +53,7 @@ export default async function Home({ params }) {
             </span>
           </h1>
           <div className="story__media" data-reveal data-parallax>
-            <Img name="drafting" alt="" ratio="21 / 9" sizes="100vw" />
+            <Img name="story" alt="" ratio="21 / 9" sizes="100vw" />
           </div>
           <div className="story__grid">
             <h2 className="story__label" data-reveal>
@@ -95,7 +92,7 @@ export default async function Home({ params }) {
             <h2 className="h2">{h.servicesTitle}</h2>
             <ArrowLink href={`/${lang}/services`}>{dict.cta.allServices}</ArrowLink>
             <span data-parallax>
-              <Img name="interiorA" alt="" ratio="4 / 5" sizes="(min-width: 1000px) 30vw, 100vw" />
+              <Img name="servicesSide" alt="" ratio="4 / 5" sizes="(min-width: 1000px) 30vw, 100vw" />
             </span>
           </div>
           <ol className="slist">
@@ -110,30 +107,32 @@ export default async function Home({ params }) {
         </div>
       </section>
 
-      <section id="work" className="section">
-        <div className="wrap">
-          <div className="shead">
-            <div data-reveal>
-              <p className="kicker">{h.workKicker}</p>
-              <h2 className="h2">{h.workTitle}</h2>
+      {site.showProjects && (
+        <section id="work" className="section">
+          <div className="wrap">
+            <div className="shead">
+              <div data-reveal>
+                <p className="kicker">{h.workKicker}</p>
+                <h2 className="h2">{h.workTitle}</h2>
+              </div>
+              <ArrowLink href={`/${lang}/projects#all`}>{dict.cta.allProjects}</ArrowLink>
             </div>
-            <ArrowLink href={`/${lang}/projects#all`}>{dict.cta.allProjects}</ArrowLink>
+            <div className="work">
+              {featured.map((p, i) => (
+                <ProjectCard
+                  key={p.slug}
+                  project={p}
+                  lang={lang}
+                  index={i}
+                  ratio={RATIOS[i % 4]}
+                  sizes="(min-width: 800px) 58vw, 100vw"
+                  label={dict.cta.viewProject}
+                />
+              ))}
+            </div>
           </div>
-          <div className="work">
-            {featured.map((p, i) => (
-              <ProjectCard
-                key={p.slug}
-                project={p}
-                lang={lang}
-                index={i}
-                ratio={RATIOS[i % 4]}
-                sizes="(min-width: 800px) 58vw, 100vw"
-                label={dict.cta.viewProject}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section className="section section--line">
         <div className="wrap">
@@ -158,7 +157,7 @@ export default async function Home({ params }) {
 
       <section className="quote">
         <span data-parallax className="quote__media">
-          <Img name="interiorC" alt="" sizes="100vw" />
+          <Img name="quote" alt="" sizes="100vw" />
         </span>
         <div className="wrap" data-reveal>
           <blockquote>{h.quote}</blockquote>

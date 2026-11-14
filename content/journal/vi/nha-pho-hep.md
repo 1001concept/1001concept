@@ -2,7 +2,7 @@
 title: Năm cách đưa ánh sáng vào nhà phố hẹp
 excerpt: Nhà ống bốn, năm mét bề ngang không nhất thiết phải tối. Đây là những giải pháp chúng tôi dùng thường xuyên nhất.
 date: 2026-09-08
-cover: archA
+cover: journalHouse
 ---
 
 Nhà phố Việt Nam thường chỉ có một mặt thoáng. Phần giữa và cuối nhà vì thế hay tối và bí. Dưới đây là năm giải pháp đã được kiểm chứng qua nhiều công trình.

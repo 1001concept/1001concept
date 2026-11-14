@@ -6,10 +6,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "images": "node scripts/build-images.mjs"
   },
   "engines": {
     "node": ">=20"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.0"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

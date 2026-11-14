@@ -7,6 +7,10 @@ export const site = {
   suffix: 'VIETNAM',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
 
+  // Bật/tắt toàn bộ phần Dự án (menu, mục trên trang chủ, trang /projects).
+  // Đang TẮT cho đến khi có ảnh và thông tin công trình thật. Đổi thành true để bật lại.
+  showProjects: false,
+
   // Video mở đầu trang chủ. Chép file vào /public/video rồi điền đường dẫn,
   // ví dụ '/video/hero.mp4'. Để trống thì trang chủ dùng ảnh `hero`.
   heroVideo: '/video/hero.mp4',

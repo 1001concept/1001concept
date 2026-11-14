@@ -25,7 +25,8 @@ npm start
 | --- | --- |
 | `content/site.js` | Số điện thoại, Zalo, email, địa chỉ, mạng xã hội, số liệu nổi bật |
 | `content/projects.js` | Danh sách dự án (song ngữ) |
-| `content/images.js` | Kho ảnh — đổi ảnh giữ chỗ thành ảnh thật tại đây |
+| `content/images.js` | Kho ảnh — gán ảnh cho từng vị trí trên website |
+| `assets/originals/` | Ảnh gốc độ phân giải cao (không đưa thẳng lên web) |
 | `content/journal/vi`, `content/journal/en` | Bài tạp chí dạng Markdown |
 | `lib/dict.js` | Toàn bộ chữ trên giao diện, theo từng ngôn ngữ |
 | `app/[lang]/…` | Các trang: trang chủ, dự án, dịch vụ, quy trình, giới thiệu, tạp chí, liên hệ |
@@ -39,7 +40,7 @@ Mọi nội dung hiện tại là **dữ liệu mẫu**:
 
 1. `content/site.js` — thay số điện thoại, Zalo, email, địa chỉ, link mạng xã hội và các con số (120+ công trình, 9 năm…).
 2. `content/projects.js` — thay bằng dự án thật.
-3. Ảnh — chép ảnh vào `public/images/` rồi sửa `content/images.js`, ví dụ `hero: '/images/hero.jpg'`. Ảnh hiện tại lấy từ Unsplash chỉ để giữ chỗ.
+3. Ảnh — toàn bộ ảnh hiện là ảnh công trình của 1001CONCEPT (lấy từ Instagram của công ty). Thêm ảnh mới: chép file gốc vào `assets/originals/`, chạy `npm run images`, rồi gán tên file trong `content/images.js`.
 4. `content/journal/` — sửa hoặc thêm bài. Mỗi bài cần hai file cùng tên trong `vi/` và `en/`.
 5. Video mở đầu — chép video vào `public/video/` rồi điền `heroVideo: '/video/hero.mp4'` trong `content/site.js`. Để trống thì trang chủ dùng ảnh `hero`. Nên dùng file MP4 dưới 8 MB, không tiếng, dài 10–20 giây.
 6. Logo — hiện là chữ "1001CONCEPT" dựng bằng font. Khi có file logo, thay trong `components/Header.js` và `components/Chrome.js`.

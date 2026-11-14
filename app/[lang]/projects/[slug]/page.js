@@ -2,13 +2,14 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { CtaBand, Img } from '@/components/ui';
 import { categories, getProject, projects } from '@/content/projects';
-import { locales } from '@/content/site';
+import { locales, site } from '@/content/site';
 import { getDict } from '@/lib/dict';
 import { pageMeta } from '@/lib/seo';
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
+  if (!site.showProjects) return [];
   return locales.flatMap((lang) => projects.map((p) => ({ lang, slug: p.slug })));
 }
 
@@ -24,7 +25,7 @@ export default async function ProjectPage({ params }) {
   const { lang, slug } = await params;
   const project = getProject(slug);
   const dict = getDict(lang);
-  if (!project) notFound();
+  if (!project || !site.showProjects) notFound();
 
   const l = dict.projects;
   const t = project[lang];

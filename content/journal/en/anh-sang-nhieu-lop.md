@@ -2,7 +2,7 @@
 title: Why a beautiful home needs more than one layer of light
 excerpt: A single ceiling fixture lights everything evenly — and flatly. Layered lighting is the simplest way to give a home depth.
 date: 2026-10-20
-cover: interiorC
+cover: journalLight
 ---
 
 Most homes in Vietnam are lit by one source: a ceiling fixture in the middle of the room. It is bright enough, but it flattens every surface and takes away the depth of the room after dark.

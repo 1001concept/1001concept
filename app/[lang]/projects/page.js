@@ -1,6 +1,8 @@
+import { notFound } from 'next/navigation';
 import ProjectGrid from '@/components/ProjectGrid';
 import { CtaBand, PageHero, ProjectCard } from '@/components/ui';
 import { categories, projects } from '@/content/projects';
+import { site } from '@/content/site';
 import { getDict } from '@/lib/dict';
 import { pageMeta } from '@/lib/seo';
 
@@ -13,6 +15,7 @@ export async function generateMetadata({ params }) {
 export default async function ProjectsPage({ params }) {
   const { lang } = await params;
   const dict = getDict(lang);
+  if (!site.showProjects) notFound();
   const t = dict.projects;
   const featured = projects.slice(0, 2);
 

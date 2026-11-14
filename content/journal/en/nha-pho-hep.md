@@ -2,7 +2,7 @@
 title: Five ways to bring daylight into a narrow townhouse
 excerpt: A tube house four or five metres wide does not have to be dark. These are the solutions we use most often.
 date: 2026-09-08
-cover: archA
+cover: journalHouse
 ---
 
 The Vietnamese townhouse usually has one open face. The middle and rear of the house are often dark and stuffy as a result. Here are five solutions proven across many projects.
