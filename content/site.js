@@ -20,7 +20,7 @@ export const site = {
   phoneHref: '+84775048557',
   zalo: '84775048557', // số Zalo, viết liền, có mã quốc gia
   messenger: '1001conceptvn', // username trang Facebook
-  email: '1001concept@gmail.com',
+  email: 'info@1001concept.com',
 
   address: {
     vi: '600 Nguyễn Lương Bằng, Phường Tân Mỹ, TP. Hồ Chí Minh, Việt Nam',
