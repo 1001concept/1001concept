@@ -665,20 +665,25 @@ a:focus-visible .img--zoom img {
   display: none;
 }
 
-/* màn hình hẹp: chỉ hiện phần "1001CONCEPT" của logo;
-   khi đã cuộn xuống thì thu lại thành biểu tượng tròn */
+/* khi đã cuộn xuống, logo chữ thu lại thành biểu tượng tròn (mọi cỡ màn hình) */
+.header.is-past .logo {
+  width: auto;
+}
+.header.is-past .logo .logo__word {
+  display: none;
+}
+.header.is-past .logo .logo__mark {
+  display: block;
+  width: auto;
+  height: 34px;
+  aspect-ratio: 441 / 400;
+  animation: fadein 0.4s ease both;
+}
+
+/* màn hình hẹp: chỉ hiện phần "1001CONCEPT" của logo */
 @media (max-width: 599px) {
-  .header.is-past .logo {
-    width: auto;
-  }
-  .header.is-past .logo .logo__word {
-    display: none;
-  }
   .header.is-past .logo .logo__mark {
-    display: block;
     height: 30px;
-    aspect-ratio: 441 / 400;
-    animation: fadein 0.4s ease both;
   }
   .logo {
     width: calc(15px * 1211 / 131);
