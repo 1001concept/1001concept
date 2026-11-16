@@ -25,7 +25,7 @@ export default async function ServicesPage({ params }) {
                 <Img name={s.image} alt={s.name} ratio="4 / 5" sizes="(min-width: 900px) 50vw, 100vw" />
               </div>
               <div className="svc__text" data-reveal style={{ '--d': '0.1s' }}>
-                <p className="kicker">{String(i + 1).padStart(2, '0')}</p>
+                {t.items.length > 1 ? <p className="kicker">{String(i + 1).padStart(2, '0')}</p> : null}
                 <h2 className="h2">{s.name}</h2>
                 <p>{s.summary}</p>
                 <p className="svc__label">{t.suited}</p>

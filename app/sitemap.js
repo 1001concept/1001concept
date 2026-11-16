@@ -2,7 +2,7 @@ import { projects } from '@/content/projects';
 import { locales, site } from '@/content/site';
 import { getPosts } from '@/lib/journal';
 
-const PAGES = ['', '/projects', '/services', '/process', '/about', '/journal', '/contact'].filter(
+const PAGES = ['', '/projects', '/services', '/services/rendering', '/process', '/about', '/journal', '/contact'].filter(
   (path) => site.showProjects || path !== '/projects',
 );
 

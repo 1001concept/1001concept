@@ -51,7 +51,13 @@ export default async function ContactPage({ params }) {
               </div>
               <div>
                 <dt>{t.hours}</dt>
-                <dd>{site.hours[lang]}</dd>
+                <dd>
+                  {site.hours[lang].map((line) => (
+                    <span key={line} style={{ display: 'block' }}>
+                      {line}
+                    </span>
+                  ))}
+                </dd>
               </div>
             </dl>
           </aside>

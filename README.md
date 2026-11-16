@@ -79,7 +79,7 @@ git push -u origin main
    - Install command: `npm install`
    - Build command: `npm run build`
    - Start command: `npm start`
-4. Thêm biến môi trường `NEXT_PUBLIC_SITE_URL` = tên miền chính thức, ví dụ `https://1001concept.vn` (dùng cho SEO, sitemap, ảnh chia sẻ).
+4. Thêm biến môi trường `NEXT_PUBLIC_SITE_URL` = tên miền chính thức, là `https://1001concept.com` (dùng cho SEO, sitemap, ảnh chia sẻ).
 5. Bấm **Deploy**. Mỗi lần `git push` lên `main`, Hostinger tự build và cập nhật lại.
 6. Trỏ tên miền về website và bật SSL trong hPanel.
 

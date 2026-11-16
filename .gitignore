@@ -6,3 +6,9 @@ out/
 .DS_Store
 *.log
 .claude/
+
+# Thư mục nhận ảnh và thông tin dự án mới (chỉ nằm trên máy)
+du-an-moi/
+
+# Ảnh gốc độ phân giải cao: chỉ giữ trên máy, website dùng bản WebP trong public/images
+assets/originals/

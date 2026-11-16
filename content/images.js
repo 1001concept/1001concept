@@ -16,12 +16,16 @@ export const images = {
   quote: 'capy-house-focus', // nền câu trích dẫn
 
   // Trang Dịch vụ
-  svcArchitecture: 'capy-house',
   svcInterior: 'kitchen',
+
+  // Trang Outsource Design (B2B)
+  renderHero: 'enghouse-wine-room',
+  renderGallery: ['enghouse-kitchen', 'enghouse-lounge', 'enghouse-living', 'enghouse-kitchen-dining'],
 
   // Trang Giới thiệu
   studio: 'wine-lounge',
   aboutPortrait: 'capy-house-focus',
+  philosophySide: 'enghouse-living', // ảnh dọc dưới tiêu đề "Triết lý thiết kế"
 
   // Ảnh bìa bài tạp chí
   journalLight: 'wine-cabinet',
@@ -47,4 +51,16 @@ export function imageSrc(key, w = 1600) {
 export function imageSrcSet(key) {
   const name = entry(key);
   return manifest[name].widths.map((w) => `/images/${name}-${w}.webp ${w}w`).join(', ');
+}
+
+// true nếu ảnh nằm ngang — dùng để chọn tỉ lệ khung phù hợp.
+export function isLandscape(key) {
+  const { width, height } = manifest[entry(key)];
+  return width > height;
+}
+
+// Tỉ lệ khung gốc của ảnh, dạng "rộng / cao" cho CSS aspect-ratio.
+export function imageAspect(key) {
+  const { width, height } = manifest[entry(key)];
+  return `${width} / ${height}`;
 }

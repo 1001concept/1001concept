@@ -14,7 +14,6 @@ export async function generateMetadata({ params }) {
   return { ...pageMeta({ lang, description: dict.meta.description }), title: { absolute: dict.meta.title } };
 }
 
-const RATIOS = ['4 / 3', '3 / 4', '4 / 5', '3 / 2'];
 
 export default async function Home({ params }) {
   const { lang } = await params;
@@ -22,7 +21,10 @@ export default async function Home({ params }) {
   const h = dict.home;
   const featured = projects.slice(0, 4);
   const posts = getPosts(lang).slice(0, 3);
-  const services = [...dict.services.items.map((s) => ({ name: s.name, text: s.summary })), ...dict.services.extras];
+  const services = [
+    ...dict.services.items.map((s) => ({ name: s.name, text: s.summary })),
+    { name: dict.rendering.title, text: dict.rendering.lead },
+  ];
 
   return (
     <>
@@ -47,7 +49,7 @@ export default async function Home({ params }) {
       <section id="story" className="section story">
         <div className="wrap">
           <h1 className="story__title" data-reveal>
-            {h.title[0]} {h.title[1]}
+            {h.title[0]} {h.title[1]}{' '}
             <span>
               {h.title[2]} {h.title[3]}
             </span>
@@ -72,14 +74,16 @@ export default async function Home({ params }) {
                   {dict.cta.quote}
                 </Link>
               </div>
-              <dl className="stats">
-                {site.stats.map((s) => (
-                  <div key={s.value}>
-                    <dt>{s.value}</dt>
-                    <dd>{s[lang]}</dd>
-                  </div>
-                ))}
-              </dl>
+              {site.stats.length > 0 && (
+                <dl className="stats">
+                  {site.stats.map((s) => (
+                    <div key={s.value}>
+                      <dt>{s.value}</dt>
+                      <dd>{s[lang]}</dd>
+                    </div>
+                  ))}
+                </dl>
+              )}
             </div>
           </div>
         </div>
@@ -124,8 +128,8 @@ export default async function Home({ params }) {
                   project={p}
                   lang={lang}
                   index={i}
-                  ratio={RATIOS[i % 4]}
-                  sizes="(min-width: 800px) 58vw, 100vw"
+                  ratio="4 / 5"
+                  sizes="(min-width: 1100px) 25vw, (min-width: 640px) 50vw, 100vw"
                   label={dict.cta.viewProject}
                 />
               ))}

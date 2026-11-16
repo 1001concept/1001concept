@@ -40,7 +40,13 @@ export function Footer({ lang, dict }) {
                 <span>{site.address[lang]}</span>
               </li>
               <li>
-                <span>{site.hours[lang]}</span>
+                <span style={{ display: 'block', paddingBlock: 8 }}>
+                  {site.hours[lang].map((line) => (
+                    <span key={line} style={{ display: 'block', minHeight: 0 }}>
+                      {line}
+                    </span>
+                  ))}
+                </span>
               </li>
             </ul>
           </div>
@@ -64,7 +70,7 @@ export function Footer({ lang, dict }) {
           <span>
             © {new Date().getFullYear()} {site.name} {site.suffix}. {dict.footer.rights}
           </span>
-          <span>{site.address[lang]}</span>
+          <span>{site.city[lang]}</span>
         </div>
       </div>
     </footer>
@@ -96,6 +102,9 @@ export function ContactDock({ dict }) {
           />
           <path d="m7.500 13.500 3-3.200 2.700 2.200 3.300-3" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
+        <span className="dock__label" aria-hidden="true">
+          Messenger
+        </span>
       </a>
       <a href={`tel:${site.phoneHref}`} aria-label={dict.dock.phone}>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
@@ -104,6 +113,9 @@ export function ContactDock({ dict }) {
             strokeLinejoin="round"
           />
         </svg>
+        <span className="dock__label" aria-hidden="true">
+          {dict.dock.call}
+        </span>
       </a>
     </div>
   );

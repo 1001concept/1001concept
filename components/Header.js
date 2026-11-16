@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import Logo from '@/components/Logo';
+import Logo, { LogoMark } from '@/components/Logo';
 import { site } from '@/content/site';
 
 // Cấu trúc menu: mục có `children` là nhóm xổ xuống.
@@ -22,7 +22,13 @@ const GROUPS = [
       { key: 'all', href: '/projects#all' },
     ],
   },
-  { key: 'services', href: '/services' },
+  {
+    key: 'services',
+    children: [
+      { key: 'b2c', href: '/services' },
+      { key: 'b2b', href: '/services/rendering' },
+    ],
+  },
   { key: 'journal', href: '/journal' },
   { key: 'contact', href: '/contact' },
 ].filter((g) => site.showProjects || g.key !== 'projects');
@@ -77,21 +83,28 @@ export default function Header({ lang, nav }) {
 
   const rest = pathname.replace(/^\/(vi|en)/, '');
   const base = (href) => href.split('#')[0];
-  const isCurrent = (href) => rest.startsWith(base(href));
-  const exact = (href) => (!href.includes('#') && isCurrent(href) ? 'page' : undefined);
+  const isCurrent = (href) => rest === base(href) || rest.startsWith(`${base(href)}/`);
+  // Trong mọi đường dẫn của menu, chỉ đường dẫn khớp dài nhất mới được coi là trang hiện tại
+  // (ví dụ ở /services/rendering thì mục B2B sáng, mục B2C không).
+  const allHrefs = GROUPS.flatMap((g) => (g.children ? g.children.map((c) => c.href) : [g.href]))
+    .filter((x) => !x.includes('#'))
+    .map(base);
+  const best = allHrefs.filter(isCurrent).sort((a, b) => b.length - a.length)[0];
+  const exact = (href) => (!href.includes('#') && base(href) === best ? 'page' : undefined);
 
-  // Trang chủ và trang chi tiết dự án mở đầu bằng ảnh/video → chữ header màu sáng.
-  const overMedia = rest === '' || /^\/projects\/[^/]+$/.test(rest);
+  // Trang chủ mở đầu bằng ảnh/video → chữ header màu sáng.
+  const overMedia = rest === '';
   const light = overMedia && !scrolled && !open;
 
   return (
     <>
       <header
-        className={`header ${light ? 'header--light' : ''} ${scrolled || open ? 'is-scrolled' : ''} ${hidden && !open ? 'is-hidden' : ''}`}
+        className={`header ${light ? 'header--light' : ''} ${scrolled || open ? 'is-scrolled' : ''} ${scrolled && !open ? 'is-past' : ''} ${hidden && !open ? 'is-hidden' : ''}`}
       >
         <div className="wrap header__in">
           <Link className="logo" href={`/${lang}`} aria-label={`${site.name} ${site.suffix}`}>
-            <Logo id="logo-header" />
+            <Logo id="logo-header" className="logo__word" />
+            <LogoMark id="emblem-header" className="logo__mark" />
           </Link>
 
           <nav className="nav" aria-label="Primary">
@@ -126,24 +139,58 @@ export default function Header({ lang, nav }) {
           <div className="header__side">
             <div className="header__prefs">
               <div className="lang" role="group" aria-label="Language">
-                <Link href={`/vi${rest}`} hrefLang="vi" aria-current={lang === 'vi' ? 'true' : undefined} aria-label="Tiếng Việt">
+                <Link
+                  href={`/vi${rest}`}
+                  hrefLang="vi"
+                  aria-current={lang === 'vi' ? 'true' : undefined}
+                  aria-label="Tiếng Việt"
+                >
                   VI
                 </Link>
                 <i aria-hidden="true" />
-                <Link href={`/en${rest}`} hrefLang="en" aria-current={lang === 'en' ? 'true' : undefined} aria-label="English">
+                <Link
+                  href={`/en${rest}`}
+                  hrefLang="en"
+                  aria-current={lang === 'en' ? 'true' : undefined}
+                  aria-label="English"
+                >
                   EN
                 </Link>
               </div>
               <div className="theme" role="group" aria-label={nav.theme}>
-                <button type="button" aria-pressed={theme === 'light'} aria-label={nav.themeLight} onClick={() => applyTheme('light')}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
+                <button
+                  type="button"
+                  aria-pressed={theme === 'light'}
+                  aria-label={nav.themeLight}
+                  onClick={() => applyTheme('light')}
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    aria-hidden="true"
+                  >
                     <circle cx="12" cy="12" r="4" />
                     <path d="M12 2.500v2.500M12 19v2.500M2.500 12H5M19 12h2.500M5.300 5.300l1.800 1.800M16.900 16.900l1.800 1.800M5.300 18.700l1.800-1.800M16.900 7.100l1.800-1.800" />
                   </svg>
                 </button>
                 <i aria-hidden="true" />
-                <button type="button" aria-pressed={theme === 'dark'} aria-label={nav.themeDark} onClick={() => applyTheme('dark')}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" aria-hidden="true">
+                <button
+                  type="button"
+                  aria-pressed={theme === 'dark'}
+                  aria-label={nav.themeDark}
+                  onClick={() => applyTheme('dark')}
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
                     <path d="M20 14.500A8.500 8.500 0 0 1 9.500 4a8.500 8.500 0 1 0 10.500 10.500Z" />
                   </svg>
                 </button>
@@ -179,7 +226,13 @@ export default function Header({ lang, nav }) {
                 </div>
               </div>
             ) : (
-              <Link key={g.key} className="menu__top" href={`/${lang}${g.href}`} style={{ '--i': i }} aria-current={exact(g.href)}>
+              <Link
+                key={g.key}
+                className="menu__top"
+                href={`/${lang}${g.href}`}
+                style={{ '--i': i }}
+                aria-current={exact(g.href)}
+              >
                 {nav[g.key]}
               </Link>
             ),

@@ -61,7 +61,14 @@ export default async function RootLayout({ children, params }) {
     url: site.url,
     telephone: site.phoneHref,
     email: site.email,
-    address: { '@type': 'PostalAddress', addressLocality: site.address[lang], addressCountry: 'VN' },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: site.address[lang],
+      addressLocality: site.city[lang],
+      postalCode: site.postalCode,
+      addressCountry: 'VN',
+    },
+    sameAs: site.social.map((s) => s.href),
     description: dict.meta.description,
   };
 

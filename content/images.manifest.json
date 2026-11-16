@@ -15,6 +15,65 @@
     "width": 1405,
     "height": 1874
   },
+  "enghouse-cabinet": {
+    "widths": [
+      800,
+      1600,
+      1647
+    ],
+    "width": 1647,
+    "height": 2331
+  },
+  "enghouse-kitchen-dining": {
+    "widths": [
+      800,
+      1054
+    ],
+    "width": 1054,
+    "height": 1492
+  },
+  "enghouse-kitchen": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 3000,
+    "height": 2121
+  },
+  "enghouse-living": {
+    "widths": [
+      800,
+      1054
+    ],
+    "width": 1054,
+    "height": 1405
+  },
+  "enghouse-lounge": {
+    "widths": [
+      800,
+      1492
+    ],
+    "width": 1492,
+    "height": 1054
+  },
+  "enghouse-wine-room": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2576,
+    "height": 1819
+  },
+  "enghouse-working": {
+    "widths": [
+      800,
+      1055
+    ],
+    "width": 1055,
+    "height": 1491
+  },
   "kitchen": {
     "widths": [
       800,
@@ -48,5 +107,1163 @@
     ],
     "width": 4096,
     "height": 2896
+  },
+  "timber-house-001": {
+    "widths": [
+      800,
+      1600,
+      2240
+    ],
+    "width": 2240,
+    "height": 2800
+  },
+  "timber-house-004": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2400,
+    "height": 3000
+  },
+  "timber-house-006": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2400,
+    "height": 3000
+  },
+  "timber-house-007": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 3000,
+    "height": 1687
+  },
+  "timber-house-011": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2400,
+    "height": 3000
+  },
+  "timber-house-013": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2800,
+    "height": 2800
+  },
+  "timber-house-014": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2800,
+    "height": 2800
+  },
+  "timber-house-015": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 3000,
+    "height": 1687
+  },
+  "timber-house-017": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 3000,
+    "height": 1687
+  },
+  "timber-house-019": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2400,
+    "height": 3000
+  },
+  "timber-house-022": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 3000,
+    "height": 3000
+  },
+  "timber-house-023": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2400,
+    "height": 3000
+  },
+  "timber-house-026": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2400,
+    "height": 3000
+  },
+  "timber-house-027": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2400,
+    "height": 3000
+  },
+  "timber-house-028": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2400,
+    "height": 3000
+  },
+  "timber-house-031": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 3000,
+    "height": 1687
+  },
+  "timber-house-034": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2400,
+    "height": 3000
+  },
+  "timber-house-035": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2400,
+    "height": 3000
+  },
+  "timber-house-038": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 3000,
+    "height": 1687
+  },
+  "timber-house-041": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2400,
+    "height": 3000
+  },
+  "timber-house-044": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 3000,
+    "height": 1687
+  },
+  "timber-house-045": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2400,
+    "height": 3000
+  },
+  "timber-house-047": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 3000,
+    "height": 3000
+  },
+  "timber-house-055": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 3000,
+    "height": 3000
+  },
+  "timber-house-056": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2400,
+    "height": 3000
+  },
+  "timber-house-057": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2400,
+    "height": 3000
+  },
+  "timber-house-058": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2400,
+    "height": 3000
+  },
+  "timber-house-061": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2400,
+    "height": 3000
+  },
+  "timber-house-062": {
+    "widths": [
+      800,
+      1600,
+      2240
+    ],
+    "width": 2240,
+    "height": 2800
+  },
+  "timber-house-063": {
+    "widths": [
+      800,
+      1600,
+      2240
+    ],
+    "width": 2240,
+    "height": 2800
+  },
+  "journal-anh-sang-ba-lop": {
+    "widths": [
+      800,
+      1600
+    ],
+    "width": 1601,
+    "height": 2000
+  },
+  "journal-anh-sang-dieu-khien": {
+    "widths": [
+      800,
+      1600
+    ],
+    "width": 1601,
+    "height": 2000
+  },
+  "journal-anh-sang-nhiet-do-mau": {
+    "widths": [
+      800,
+      1600
+    ],
+    "width": 1601,
+    "height": 2000
+  },
+  "mori-apartment-k10": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2500,
+    "height": 1406
+  },
+  "mori-apartment-k12": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2500,
+    "height": 1406
+  },
+  "mori-apartment-k19": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2500,
+    "height": 1406
+  },
+  "mori-apartment-k20": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "mori-apartment-k23": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "mori-apartment-k25": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "mori-apartment-k6": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "mori-apartment-k7": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "mori-apartment-k8": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "jean-apartment-living-01r": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 1125
+  },
+  "jean-apartment-living-02": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 1125
+  },
+  "jean-apartment-living-03": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2500,
+    "height": 1406
+  },
+  "jean-apartment-living-04": {
+    "widths": [
+      800,
+      1600
+    ],
+    "width": 1800,
+    "height": 1012
+  },
+  "jean-apartment-living-05": {
+    "widths": [
+      800,
+      1600
+    ],
+    "width": 1800,
+    "height": 1012
+  },
+  "jean-apartment-living-06": {
+    "widths": [
+      800,
+      1600
+    ],
+    "width": 1800,
+    "height": 1012
+  },
+  "jean-apartment-living-10": {
+    "widths": [
+      800,
+      1400
+    ],
+    "width": 1400,
+    "height": 1400
+  },
+  "jean-apartment-living-11": {
+    "widths": [
+      800,
+      1120
+    ],
+    "width": 1120,
+    "height": 1400
+  },
+  "jean-apartment-living-12": {
+    "widths": [
+      800,
+      1120
+    ],
+    "width": 1120,
+    "height": 1400
+  },
+  "jean-apartment-living-13": {
+    "widths": [
+      800,
+      1120
+    ],
+    "width": 1120,
+    "height": 1400
+  },
+  "jean-apartment-master-01": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 1125
+  },
+  "jean-apartment-master-02": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 1125
+  },
+  "jean-apartment-master-03": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 1125
+  },
+  "jean-apartment-master-04": {
+    "widths": [
+      800,
+      1600
+    ],
+    "width": 1600,
+    "height": 2000
+  },
+  "jean-apartment-master-05": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "jean-apartment-master-07": {
+    "widths": [
+      800,
+      1600
+    ],
+    "width": 1600,
+    "height": 2000
+  },
+  "jean-apartment-master-08": {
+    "widths": [
+      800,
+      1600
+    ],
+    "width": 1600,
+    "height": 2000
+  },
+  "jean-apartment-master-09": {
+    "widths": [
+      800,
+      1600
+    ],
+    "width": 1600,
+    "height": 2000
+  },
+  "jean-apartment-master-10": {
+    "widths": [
+      800,
+      1600
+    ],
+    "width": 1600,
+    "height": 2000
+  },
+  "jean-apartment-work-07": {
+    "widths": [
+      800,
+      1500
+    ],
+    "width": 1500,
+    "height": 1200
+  },
+  "jean-apartment-work-08": {
+    "widths": [
+      800,
+      1400
+    ],
+    "width": 1400,
+    "height": 1120
+  },
+  "jean-apartment-work-09": {
+    "widths": [
+      800,
+      1120
+    ],
+    "width": 1120,
+    "height": 1400
+  },
+  "time-house-01": {
+    "widths": [
+      800,
+      1600
+    ],
+    "width": 1800,
+    "height": 1800
+  },
+  "time-house-02": {
+    "widths": [
+      800,
+      1440
+    ],
+    "width": 1440,
+    "height": 1800
+  },
+  "time-house-03": {
+    "widths": [
+      800,
+      1440
+    ],
+    "width": 1440,
+    "height": 1800
+  },
+  "time-house-04": {
+    "widths": [
+      800,
+      1600
+    ],
+    "width": 1600,
+    "height": 2000
+  },
+  "time-house-05": {
+    "widths": [
+      800,
+      1440
+    ],
+    "width": 1440,
+    "height": 1800
+  },
+  "time-house-06": {
+    "widths": [
+      800,
+      1440
+    ],
+    "width": 1440,
+    "height": 1800
+  },
+  "time-house-07": {
+    "widths": [
+      800,
+      1440
+    ],
+    "width": 1440,
+    "height": 1800
+  },
+  "time-house-08": {
+    "widths": [
+      800,
+      1440
+    ],
+    "width": 1440,
+    "height": 1800
+  },
+  "time-house-09": {
+    "widths": [
+      800,
+      1440
+    ],
+    "width": 1440,
+    "height": 1800
+  },
+  "time-house-10": {
+    "widths": [
+      800,
+      1600
+    ],
+    "width": 1800,
+    "height": 1012
+  },
+  "time-house-11": {
+    "widths": [
+      800,
+      1600
+    ],
+    "width": 1800,
+    "height": 1012
+  },
+  "time-house-12": {
+    "widths": [
+      800,
+      1440
+    ],
+    "width": 1440,
+    "height": 1800
+  },
+  "time-house-13": {
+    "widths": [
+      800,
+      1440
+    ],
+    "width": 1440,
+    "height": 1800
+  },
+  "time-house-14": {
+    "widths": [
+      800,
+      1440
+    ],
+    "width": 1440,
+    "height": 1800
+  },
+  "time-house-15": {
+    "widths": [
+      800,
+      1440
+    ],
+    "width": 1440,
+    "height": 1800
+  },
+  "lam-apartment-bed-01": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 1600
+  },
+  "lam-apartment-bed-02": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 1600
+  },
+  "lam-apartment-bed-03": {
+    "widths": [
+      800,
+      1600
+    ],
+    "width": 1600,
+    "height": 2000
+  },
+  "lam-apartment-bed-04": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 1600
+  },
+  "lam-apartment-bed-05": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 1600
+  },
+  "lam-apartment-bed-06": {
+    "widths": [
+      800,
+      1600
+    ],
+    "width": 1600,
+    "height": 2000
+  },
+  "lam-apartment-bed-07": {
+    "widths": [
+      800,
+      1600
+    ],
+    "width": 1600,
+    "height": 2000
+  },
+  "lam-apartment-bed-08": {
+    "widths": [
+      800,
+      1600
+    ],
+    "width": 1600,
+    "height": 2000
+  },
+  "lam-apartment-bed-09": {
+    "widths": [
+      800,
+      1600
+    ],
+    "width": 1600,
+    "height": 2000
+  },
+  "lam-apartment-living-01": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "lam-apartment-living-02": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "lam-apartment-living-03": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "lam-apartment-living-04": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2000
+  },
+  "lam-apartment-living-05": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "lam-apartment-living-06": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "lam-apartment-living-07": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2500,
+    "height": 2000
+  },
+  "lam-apartment-living-08": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2000
+  },
+  "lam-apartment-living-09": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "lam-apartment-living-10": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "lam-apartment-living-11": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "lam-apartment-living-12": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2500,
+    "height": 2500
+  },
+  "lam-apartment-living-13": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2500,
+    "height": 1406
+  },
+  "lam-apartment-living-14": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2500,
+    "height": 1406
+  },
+  "lam-apartment-living-15": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2500,
+    "height": 1406
+  },
+  "lam-apartment-living-16": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2500,
+    "height": 1406
+  },
+  "lam-apartment-living-17": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2000
+  },
+  "long-house-bed1-01": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "long-house-bed1-02": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2500,
+    "height": 2000
+  },
+  "long-house-bed1-03": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2500,
+    "height": 2000
+  },
+  "long-house-bed1-04": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2500,
+    "height": 2000
+  },
+  "long-house-bed1-05": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2000
+  },
+  "long-house-bed1-06": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "long-house-bed1-07": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "long-house-bed2-01": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2500,
+    "height": 2000
+  },
+  "long-house-bed2-02": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2500,
+    "height": 2000
+  },
+  "long-house-bed2-03": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "long-house-bed2-04": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "long-house-bed2-05": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "long-house-bed2-06": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "long-house-living-01": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "long-house-living-02": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "long-house-living-03": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "long-house-living-04": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "long-house-living-05": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "long-house-living-06": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "long-house-living-07": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "long-house-living-08": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2500,
+    "height": 1406
+  },
+  "long-house-living-09": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2500,
+    "height": 1406
+  },
+  "long-house-living-10": {
+    "widths": [
+      800,
+      1600,
+      2400
+    ],
+    "width": 2500,
+    "height": 1406
+  },
+  "long-house-living-11": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "long-house-living-12": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "long-house-living-13": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
+  },
+  "long-house-living-14": {
+    "widths": [
+      800,
+      1600
+    ],
+    "width": 1600,
+    "height": 2000
+  },
+  "long-house-living-15": {
+    "widths": [
+      800,
+      1600,
+      2000
+    ],
+    "width": 2000,
+    "height": 2500
   }
 }

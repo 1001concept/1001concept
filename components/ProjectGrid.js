@@ -20,11 +20,13 @@ export default function ProjectGrid({ projects, categories, lang, labels }) {
   return (
     <>
       <div className="filter" role="group" aria-label={labels.filter}>
-        {Object.keys(categories).map((key) => (
-          <button key={key} type="button" aria-pressed={active === key} onClick={() => setActive(key)}>
-            {categories[key][lang]}
-          </button>
-        ))}
+        {/* Chỉ còn một loại công trình thì không cần nút lọc. */}
+        {Object.keys(categories).length > 2 &&
+          Object.keys(categories).map((key) => (
+            <button key={key} type="button" aria-pressed={active === key} onClick={() => setActive(key)}>
+              {categories[key][lang]}
+            </button>
+          ))}
         <span className="filter__count" aria-live="polite">
           {String(shown.length).padStart(2, '0')} {labels.count}
         </span>

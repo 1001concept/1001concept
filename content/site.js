@@ -1,48 +1,51 @@
 // ─────────────────────────────────────────────────────────────
 // THÔNG TIN THƯƠNG HIỆU — sửa tại đây, toàn bộ website cập nhật theo.
-// Các giá trị bên dưới là DỮ LIỆU MẪU, hãy thay bằng thông tin thật.
+// Thông tin liên hệ là dữ liệu thật của công ty.
 // ─────────────────────────────────────────────────────────────
 export const site = {
   name: '1001CONCEPT',
   suffix: 'VIETNAM',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://1001concept.com',
 
   // Bật/tắt toàn bộ phần Dự án (menu, mục trên trang chủ, trang /projects).
   // Đang TẮT cho đến khi có ảnh và thông tin công trình thật. Đổi thành true để bật lại.
-  showProjects: false,
+  showProjects: true,
 
   // Video mở đầu trang chủ. Chép file vào /public/video rồi điền đường dẫn,
   // ví dụ '/video/hero.mp4'. Để trống thì trang chủ dùng ảnh `hero`.
   heroVideo: '/video/hero.mp4',
 
-  // Liên hệ (MẪU — thay bằng số thật)
-  phone: '0900 000 000',
-  phoneHref: '+84900000000',
-  zalo: '0900000000', // số Zalo, viết liền
-  messenger: '1001concept', // username trang Facebook
-  email: 'hello@1001concept.vn',
+  // Liên hệ
+  phone: '+84 77 504 8557',
+  phoneHref: '+84775048557',
+  zalo: '84775048557', // số Zalo, viết liền, có mã quốc gia
+  messenger: '1001conceptvn', // username trang Facebook
+  email: '1001concept@gmail.com',
 
   address: {
-    vi: 'Quận 1, Thành phố Hồ Chí Minh',
-    en: 'District 1, Ho Chi Minh City',
+    vi: '600 Nguyễn Lương Bằng, Phường Tân Mỹ, TP. Hồ Chí Minh, Việt Nam',
+    en: '600 Nguyen Luong Bang Street, Tan My Ward, Ho Chi Minh City, Vietnam',
   },
+  postalCode: '700000',
+  city: {
+    vi: 'TP. Hồ Chí Minh, Việt Nam',
+    en: 'Ho Chi Minh City, Vietnam',
+  },
+  // Mỗi phần tử là một dòng
   hours: {
-    vi: 'Thứ Hai – Thứ Bảy, 8:30 – 18:00',
-    en: 'Monday – Saturday, 8:30 – 18:00',
+    vi: ['Thứ Hai – Thứ Sáu: 08:30 – 17:30', 'Thứ Bảy: theo lịch hẹn', 'Chủ nhật: nghỉ'],
+    en: ['Monday – Friday: 08:30 – 17:30', 'Saturday: by appointment', 'Sunday: closed'],
   },
 
   social: [
-    { label: 'Instagram', href: 'https://instagram.com/' },
-    { label: 'Facebook', href: 'https://facebook.com/' },
-    { label: 'Behance', href: 'https://behance.net/' },
+    { label: 'Facebook', href: 'https://www.facebook.com/1001conceptvn' },
+    { label: 'Instagram', href: 'https://www.instagram.com/1001concept/' },
+    { label: 'TikTok', href: 'https://www.tiktok.com/@1001concept.interior' },
   ],
 
-  // Con số nổi bật (MẪU)
-  stats: [
-    { value: '120+', vi: 'Công trình hoàn thiện', en: 'Completed projects' },
-    { value: '09', vi: 'Năm thực hành', en: 'Years of practice' },
-    { value: '14', vi: 'Tỉnh thành', en: 'Provinces' },
-  ],
+  // Con số nổi bật (số công trình, số năm…). Để trống thì website không hiện mục này.
+  // Ví dụ: { value: '120+', vi: 'Công trình hoàn thiện', en: 'Completed projects' }
+  stats: [],
 };
 
 export const locales = ['vi', 'en'];

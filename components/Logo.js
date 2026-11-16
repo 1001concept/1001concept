@@ -24,7 +24,15 @@ export default function Logo({ id = 'logo', className = '' }) {
       fill="none"
     >
       <defs>
-        <mask id={`${id}-mark`} maskUnits="userSpaceOnUse" x="0" y="0" width={MARK_W} height={H} style={{ maskType: 'alpha' }}>
+        <mask
+          id={`${id}-mark`}
+          maskUnits="userSpaceOnUse"
+          x="0"
+          y="0"
+          width={MARK_W}
+          height={H}
+          style={{ maskType: 'alpha' }}
+        >
           <image href="/images/logo-1001concept.webp" x="0" y="0" width={SRC_W} height={SRC_H} />
         </mask>
         <clipPath id={`${id}-clip`}>
@@ -36,7 +44,13 @@ export default function Logo({ id = 'logo', className = '' }) {
       <rect x="0" y="0" width={MARK_W} height={H} fill="currentColor" mask={`url(#${id}-mark)`} />
 
       {/* VIETNAM — vẽ lại */}
-      <g clipPath={`url(#${id}-clip)`} stroke="currentColor" strokeWidth={S} strokeLinejoin="miter" strokeMiterlimit="10">
+      <g
+        clipPath={`url(#${id}-clip)`}
+        stroke="currentColor"
+        strokeWidth={S}
+        strokeLinejoin="miter"
+        strokeMiterlimit="10"
+      >
         {/* V */}
         <path d="M1295.800 -26 L1354 131 L1412.200 -26" />
         {/* I */}
@@ -52,6 +66,29 @@ export default function Logo({ id = 'logo', className = '' }) {
         {/* M */}
         <path d="M1907.500 131 V0 M1907.500 -10 L1960 131 L2012.500 -10 M2012.500 0 V131" />
       </g>
+    </svg>
+  );
+}
+
+// Biểu tượng tròn của logo (public/images/logo-mark.webp), dùng trên header điện thoại
+// sau khi người xem cuộn xuống. Cũng tự đổi màu theo chữ xung quanh.
+export function LogoMark({ id = 'logo-mark', className = '' }) {
+  const W = 441;
+  const MH = 400;
+  return (
+    <svg
+      className={className}
+      viewBox={`0 0 ${W} ${MH}`}
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      fill="none"
+    >
+      <defs>
+        <mask id={id} maskUnits="userSpaceOnUse" x="0" y="0" width={W} height={MH} style={{ maskType: 'alpha' }}>
+          <image href="/images/logo-mark.webp" x="0" y="0" width={W} height={MH} />
+        </mask>
+      </defs>
+      <rect x="0" y="0" width={W} height={MH} fill="currentColor" mask={`url(#${id})`} />
     </svg>
   );
 }
