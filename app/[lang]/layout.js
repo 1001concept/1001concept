@@ -39,6 +39,14 @@ export async function generateMetadata({ params }) {
     metadataBase: new URL(site.url),
     title: { default: dict.meta.title, template: `%s — ${site.name}` },
     description: dict.meta.description,
+    // Biểu tượng tab: nét đen cho trình duyệt giao diện sáng, nét trắng cho giao diện tối.
+    icons: {
+      icon: [
+        { url: '/icon-light.png', type: 'image/png', media: '(prefers-color-scheme: light)' },
+        { url: '/icon-dark.png', type: 'image/png', media: '(prefers-color-scheme: dark)' },
+      ],
+      apple: '/apple-icon.png',
+    },
     openGraph: {
       type: 'website',
       siteName: `${site.name} ${site.suffix}`,
