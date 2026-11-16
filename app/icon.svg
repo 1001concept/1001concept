@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="48 48 416 416">
+  <style>
+    .m { stroke: #262422; }
+    .b { fill: #262422; }
+    @media (prefers-color-scheme: dark) {
+      .m { stroke: #f6f2ec; }
+      .b { fill: #f6f2ec; }
+    }
+  </style>
+  <circle class="m" cx="256" cy="256" r="146" fill="none" stroke-width="36"/>
+  <rect class="b" x="68" y="235" width="378" height="37"/>
+</svg>
