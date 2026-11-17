@@ -39,11 +39,12 @@ export async function generateMetadata({ params }) {
     metadataBase: new URL(site.url),
     title: { default: dict.meta.title, template: `%s — ${site.name}` },
     description: dict.meta.description,
-    // Biểu tượng tab: nét đen cho trình duyệt giao diện sáng, nét trắng cho giao diện tối.
+    // Biểu tượng tab: favicon.ico cho trình duyệt cũ / điện thoại,
+    // icon.svg tự đổi nét đen ↔ trắng theo giao diện sáng / tối của trình duyệt.
     icons: {
       icon: [
-        { url: '/icon-light.png', type: 'image/png', media: '(prefers-color-scheme: light)' },
-        { url: '/icon-dark.png', type: 'image/png', media: '(prefers-color-scheme: dark)' },
+        { url: '/favicon.ico', sizes: '48x48' },
+        { url: '/icon.svg', type: 'image/svg+xml' },
       ],
       apple: '/apple-icon.png',
     },
