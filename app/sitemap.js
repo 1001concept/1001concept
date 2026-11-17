@@ -1,3 +1,4 @@
+import { outsourceProjects } from '@/content/outsource';
 import { projects } from '@/content/projects';
 import { locales, site } from '@/content/site';
 import { getPosts } from '@/lib/journal';
@@ -10,6 +11,7 @@ export default function sitemap() {
   const paths = [
     ...PAGES,
     ...(site.showProjects ? projects.map((p) => `/projects/${p.slug}`) : []),
+    ...outsourceProjects.map((p) => `/services/rendering/${p.slug}`),
     ...getPosts('vi').map((p) => `/journal/${p.slug}`),
   ];
   return locales.flatMap((lang) =>

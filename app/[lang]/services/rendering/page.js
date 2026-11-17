@@ -1,6 +1,9 @@
 import Link from 'next/link';
+import OutsourceGrid from '@/components/OutsourceGrid';
 import { Arrow, Img, PageHero } from '@/components/ui';
 import { images, isLandscape } from '@/content/images';
+import { outsourceCategories, outsourceProjects, outsourceTabs } from '@/content/outsource';
+import { site } from '@/content/site';
 import { getDict } from '@/lib/dict';
 import { pageMeta } from '@/lib/seo';
 
@@ -21,6 +24,18 @@ export default async function RenderingPage({ params }) {
 
       <section className="wrap" data-reveal="fade" data-parallax>
         <Img name="renderHero" alt="" ratio="21 / 9" sizes="100vw" priority />
+      </section>
+
+      {/* Dải số liệu */}
+      <section className="kpis" aria-label={t.title}>
+        <dl className="wrap kpis__grid">
+          {t.stats.map((s, i) => (
+            <div key={s.label} data-reveal style={{ '--d': `${i * 0.08}s` }}>
+              <dt>{s.value}</dt>
+              <dd>{s.label}</dd>
+            </div>
+          ))}
+        </dl>
       </section>
 
       <section className="section">
@@ -74,33 +89,76 @@ export default async function RenderingPage({ params }) {
               </li>
             ))}
           </ol>
-        </div>
-      </section>
 
-      <section className="section section--line">
-        <div className="wrap">
-          <h2 className="subhead" data-reveal>
-            {t.galleryTitle}
-          </h2>
-          <div className="rgrid">
-            {images.renderGallery.map((name, i) => (
-              <figure
-                key={name}
-                className={isLandscape(name) ? 'is-wide' : ''}
-                data-reveal
-                style={{ '--d': `${(i % 2) * 0.1}s` }}
-              >
-                <Img
-                  name={name}
-                  alt=""
-                  ratio={isLandscape(name) ? '3 / 2' : '3 / 4'}
-                  sizes="(min-width: 800px) 50vw, 100vw"
-                />
-              </figure>
-            ))}
+          {/* Ô liên hệ hợp tác */}
+          <div className="collab" data-reveal>
+            <div>
+              <p className="kicker">{t.boxKicker}</p>
+              <h3 className="collab__title">{t.boxTitle}</h3>
+              <p className="muted">{t.boxText}</p>
+            </div>
+            <div className="collab__actions">
+              <a className="btn btn--solid" href={`https://zalo.me/${site.zalo}`} target="_blank" rel="noopener noreferrer">
+                {t.boxZalo}
+                <Arrow />
+              </a>
+              <a className="btn" href={`tel:${site.phoneHref}`}>
+                {t.boxCall} {site.phone}
+              </a>
+              <a className="btn" href={`mailto:${site.email}?subject=${encodeURIComponent(t.boxEmailSubject)}`}>
+                {t.boxEmail}
+              </a>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Dự án outsource theo hạng mục */}
+      <section id="works" className="section section--line">
+        <div className="wrap">
+          <div className="shead">
+            <div data-reveal>
+              <p className="kicker">{t.worksKicker}</p>
+              <h2 className="h2">{t.worksTitle}</h2>
+            </div>
+          </div>
+          <OutsourceGrid
+            projects={outsourceProjects}
+            categories={outsourceCategories}
+            tabs={outsourceTabs}
+            lang={lang}
+            labels={{ filter: t.worksFilter, all: t.worksAll, count: t.worksCount, empty: t.worksEmpty }}
+          />
+        </div>
+      </section>
+
+      {/* Ảnh tạm, chỉ hiện khi chưa có dự án outsource nào */}
+      {outsourceProjects.length === 0 ? (
+        <section className="section section--line">
+          <div className="wrap">
+            <h2 className="subhead" data-reveal>
+              {t.galleryTitle}
+            </h2>
+            <div className="rgrid">
+              {images.renderGallery.map((name, i) => (
+                <figure
+                  key={name}
+                  className={isLandscape(name) ? 'is-wide' : ''}
+                  data-reveal
+                  style={{ '--d': `${(i % 2) * 0.1}s` }}
+                >
+                  <Img
+                    name={name}
+                    alt=""
+                    ratio={isLandscape(name) ? '3 / 2' : '3 / 4'}
+                    sizes="(min-width: 800px) 50vw, 100vw"
+                  />
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="section section--line">
         <div className="wrap cta">
